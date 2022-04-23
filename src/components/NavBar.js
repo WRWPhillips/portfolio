@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { FaGithub, FaLinkedin, FaMedium, FaLightbulb } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const Button = styled.button`
     display:inline-block;
     padding:0.35em 1.2em;
+    padding-left: 0.2em;
     border:0.2em solid ${props => props.theme.borderColor};
     margin:0 0.3em 0.3em 0;
     border-radius:0.15em;
@@ -30,6 +32,7 @@ const Button = styled.button`
 const A = styled.a`
     display:inline-block;
     padding:0.35em 1.2em;
+    padding-left: 0.2em;
     border:0.2em solid ${props => props.theme.borderColor};
     margin:0 0.3em 0.3em 0;
     border-radius:0.15em;
@@ -97,10 +100,10 @@ const NavBar = (props) => {
             <H1 className='title'>Will Phillips</H1>
             <H2 className='headline'>Full-Stack Web Developer based in Bentonville, Arkansas.</H2>
             <Nav>
-                <A className = 'GitHub-Button' target='_blank' href='https://github.com/WRWPhillips/'>GitHub</A>
-                <A className = 'LinkedIn-Button' target='_blank' href='https://www.linkedin.com/in/wrwphillips/'>LinkedIn</A>
-                <A className = 'Medium-Button' target='_blank' href='https://medium.com/@42w.phillips42/'>Medium</A>
-                <Button className = 'dark-mode-Button' onClick={toggleMode}>{props.darkMode ? 'Light Mode' : 'Dark Mode'}</Button>
+                <A className = 'GitHub-Button' target='_blank' href='https://github.com/WRWPhillips/'><FaGithub /> GitHub</A>
+                <A className = 'LinkedIn-Button' target='_blank' href='https://www.linkedin.com/in/wrwphillips/'><FaLinkedin /> LinkedIn</A>
+                <A className = 'Medium-Button' target='_blank' href='https://medium.com/@42w.phillips42/'><FaMedium /> Medium</A>
+                <Button className = 'dark-mode-Button' onClick={toggleMode}><FaLightbulb /> {props.darkMode ? 'Light Mode' : 'Dark Mode'}</Button>
             </Nav>
         </Header>
     )
