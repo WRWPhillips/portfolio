@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import styled, { ThemeProvider } from "styled-components";
+import React, { useEffect } from "react";
+import { ThemeProvider } from "styled-components";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { GlobalStyles } from "./components/GlobalStyle";
 import { lightTheme, darkTheme } from "./components/Themes";
@@ -11,6 +11,12 @@ import useDarkMode from "./hooks/useDarkMode";
 
 function App() {
   const [darkMode, setDarkMode] = useDarkMode(); 
+  
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+  useEffect(() => {
+    setDarkMode(prefersDarkMode);
+  }, [prefersDarkMode]);
 
   return (
     <ThemeProvider theme={ darkMode ? darkTheme : lightTheme }>

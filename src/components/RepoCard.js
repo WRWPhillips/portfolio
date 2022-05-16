@@ -60,7 +60,6 @@ const LanguageName = styled.p`
 `
 
 const RepoCard = props => {
-    console.log(props.repo); 
     return(
         <Card>
             <CardTitle>{props.repo.name}</CardTitle>
