@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaMedium, FaLightbulb } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaGoogleDrive, FaHome, FaLightbulb } from 'react-icons/fa';
 import styled from 'styled-components';
+import { Link, useLocation } from "react-router-dom";
 
 const Button = styled.button`
     display:inline-block;
@@ -9,7 +10,8 @@ const Button = styled.button`
     border:0.2em solid ${props => props.theme.borderColor};
     margin:0 0.3em 0.3em 0;
     border-radius:0.15em;
-    height: 30px;
+    width: 20%;
+    height: 40px;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
@@ -20,8 +22,9 @@ const Button = styled.button`
     text-align:center;
     transition: all 0.2s;
     margin-bottom: 3%;
-    @media (max-width:600px) {
+    @media (max-width:700px) {
         width: 100%;
+        height: 30px;
     }
     &: hover {
         color: ${props => props.theme.backgroundColor};
@@ -36,7 +39,8 @@ const A = styled.a`
     border:0.2em solid ${props => props.theme.borderColor};
     margin:0 0.3em 0.3em 0;
     border-radius:0.15em;
-    height: 30px;
+    width: 20%;
+    height: 40px;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
@@ -47,8 +51,38 @@ const A = styled.a`
     text-align:center;
     transition: all 0.2s;
     margin-bottom: 3%;
-    @media (max-width:600px) {
+    @media (max-width:700px) {
         width: 100%;
+        height: 30px;
+    }
+    &: hover {
+        color: ${props => props.theme.backgroundColor};
+        background-color: ${props => props.theme.textColor};
+    }
+`;
+
+const StyledLink = styled(Link)`
+    display:inline-block;
+    padding:0.35em 1.2em;
+    padding-left: 0.2em;
+    border:0.2em solid ${props => props.theme.borderColor};
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.15em;
+    width: 20%;
+    height: 40px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color: ${props => props.theme.textColor};
+    font-size: 1em;
+    background-color: ${props => props.theme.backgroundColor};
+    text-align:center;
+    transition: all 0.2s;
+    margin-bottom: 3%;
+    @media (max-width:700px) {
+        width: 100%;
+        height: 30px;
     }
     &: hover {
         color: ${props => props.theme.backgroundColor};
@@ -90,6 +124,10 @@ const Nav = styled.nav`
 
 
 const NavBar = (props) => {
+
+    const location = useLocation();
+    console.log(location);
+
     const toggleMode = e => {
         e.preventDefault();
         props.setDarkMode(!props.darkMode);
@@ -102,8 +140,11 @@ const NavBar = (props) => {
             <Nav>
                 <A className = 'GitHub-Button' target='_blank' href='https://github.com/WRWPhillips/'><FaGithub /> GitHub</A>
                 <A className = 'LinkedIn-Button' target='_blank' href='https://www.linkedin.com/in/wrwphillips/'><FaLinkedin /> LinkedIn</A>
-                <A className = 'Medium-Button' target='_blank' href='https://medium.com/@42w.phillips42/'><FaMedium /> Medium</A>
-                <Button className = 'dark-mode-Button' onClick={toggleMode}><FaLightbulb /> {props.darkMode ? 'Light Mode' : 'Dark Mode'}</Button>
+                { location.pathname == "/resume" ?
+                    <StyledLink className='Home-Link' to="/"><FaHome />Home</StyledLink> :
+                    <StyledLink className='Resume-Link' to="/resume"><FaGoogleDrive />Resume</StyledLink> 
+                }
+                <Button className = 'dark-mode-Button' onClick={toggleMode}><FaLightbulb /> {props.darkMode ? 'Light' : 'Dark'}</Button>
             </Nav>
         </Header>
     )

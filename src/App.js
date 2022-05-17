@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Routes, Route } from "react-router-dom";
+
 
 import { GlobalStyles } from "./components/GlobalStyle";
 import { lightTheme, darkTheme } from "./components/Themes";
 import NavBar from "./components/NavBar";
 import RepoCards from "./components/RepoCards";
+import Resume from "./components/Resume";
 
 import useDarkMode from "./hooks/useDarkMode";
 
@@ -24,7 +27,10 @@ function App() {
         <GlobalStyles/>
           <div className="App">
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode}/>
-            <RepoCards />
+            <Routes>
+              <Route path='/' element={<RepoCards />} />
+              <Route path='/resume' element={<Resume />} />
+            </Routes>
           </div>
       </>
     </ThemeProvider>
