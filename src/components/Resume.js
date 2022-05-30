@@ -30,14 +30,9 @@ const Div = styled.div`
 `
 
 const Resume = () => {
-  console.log(process.env);
-  const doc = `${process.env.PUBLIC_URL || '../../public'}/assets/Resume.pdf`;
-  console.log(doc);
-
 
   return(
         <>
-            <h1>Resume goes here</h1>
             <Div>
                 <Iframe src="https://docs.google.com/document/d/e/2PACX-1vSZFWRkp4S9-kv5P54FHyHWZKP10d7YwGm492vjczFLoTX8WHM8fAfv_tQTfja9RkR7s55PCx_lLJJT/pub?embedded=true"></Iframe>
             </Div>
