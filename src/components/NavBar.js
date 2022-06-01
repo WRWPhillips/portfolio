@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaGoogleDrive, FaHome, FaLightbulb } from 'react-icons/fa';
+import React from 'react';
+import { FaGithub, FaLinkedin, FaHome, FaLightbulb } from 'react-icons/fa';
 import { IoDocumentTextSharp } from 'react-icons/io5'
 import styled from 'styled-components';
 import { Link, useLocation } from "react-router-dom";
@@ -141,7 +141,7 @@ const NavBar = (props) => {
             <Nav>
                 <A className = 'GitHub-Button' target='_blank' href='https://github.com/WRWPhillips/'><FaGithub /> GitHub</A>
                 <A className = 'LinkedIn-Button' target='_blank' href='https://www.linkedin.com/in/wrwphillips/'><FaLinkedin /> LinkedIn</A>
-                { location.pathname == "/resume" ?
+                { location.pathname === "/resume" ?
                     <StyledLink className='Home-Link' to="/"><FaHome />Home</StyledLink> :
                     <StyledLink className='Resume-Link' to="/resume"><IoDocumentTextSharp />Resume</StyledLink> 
                 }
