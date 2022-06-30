@@ -2,127 +2,17 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaHome, FaLightbulb } from 'react-icons/fa';
 import { IoDocumentTextSharp } from 'react-icons/io5'
 import styled from 'styled-components';
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const Button = styled.button`
-    display:inline-block;
-    padding:0.35em 1.2em;
-    padding-left: 0.2em;
-    border:0.2em solid ${props => props.theme.borderColor};
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.15em;
-    width: 20%;
-    height: 40px;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color: ${props => props.theme.textColor};
-    font-size: 1em;
-    background-color: ${props => props.theme.backgroundColor};
-    text-align:center;
-    transition: all 0.2s;
-    margin-bottom: 3%;
-    @media (max-width:700px) {
-        width: 100%;
-        height: 30px;
-    }
-    &: hover {
-        color: ${props => props.theme.backgroundColor};
-        background-color: ${props => props.theme.textColor};
-    }
-`;
-
-const A = styled.a`
-    display:inline-block;
-    padding:0.35em 1.2em;
-    padding-left: 0.2em;
-    border:0.2em solid ${props => props.theme.borderColor};
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.15em;
-    width: 20%;
-    height: 40px;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color: ${props => props.theme.textColor};
-    font-size: 1em;
-    background-color: ${props => props.theme.backgroundColor};
-    text-align:center;
-    transition: all 0.2s;
-    margin-bottom: 3%;
-    @media (max-width:700px) {
-        width: 100%;
-        height: 30px;
-    }
-    &: hover {
-        color: ${props => props.theme.backgroundColor};
-        background-color: ${props => props.theme.textColor};
-    }
-`;
-
-const StyledLink = styled(Link)`
-    display:inline-block;
-    padding:0.35em 1.2em;
-    padding-left: 0.2em;
-    border:0.2em solid ${props => props.theme.borderColor};
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.15em;
-    width: 20%;
-    height: 40px;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color: ${props => props.theme.textColor};
-    font-size: 1em;
-    background-color: ${props => props.theme.backgroundColor};
-    text-align:center;
-    transition: all 0.2s;
-    margin-bottom: 3%;
-    @media (max-width:700px) {
-        width: 100%;
-        height: 30px;
-    }
-    &: hover {
-        color: ${props => props.theme.backgroundColor};
-        background-color: ${props => props.theme.textColor};
-    }
-`;
-
-const H1 = styled.h1`
-    font-size: 3.5em;
-    font-style: italic;
-    margin-bottom: 0;
-`;
-
-const H2 = styled.h2`
-    font-size: 2em;
-    margin-top: 5%;
-`;
-
-const Header = styled.div`
-    border: .5em solid ${props => props.theme.borderColor};
-    display: flex;
-    flex-flow: column wrap;
-    width: 80%;
-    align-content: center;
-    margin: 5% auto;
-    text-align: center;
-`;
-
-const Nav = styled.nav`
-    display: flex;
-    justify-content: space-around;
-    @media(max-width:600px) {
-        flex-flow: column nowrap;
-        height: 20vh;
-        padding: 5%;
-        padding-bottom: 3%;
-    }
-`;
-
+import {
+    Button,
+    A, 
+    StyledLink,
+    H1, 
+    H2,
+    Header, 
+    Nav, 
+} from './StyledComponents'
 
 const NavBar = (props) => {
 

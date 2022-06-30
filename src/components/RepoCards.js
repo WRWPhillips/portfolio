@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import styled from 'styled-components';
-
 import RepoCard from './RepoCard';
 
-
-const CardSection = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: 0 5%;
-`;
+import { CardSection } from './StyledComponents'
 
 const RepoCards = () => {
     const [repos, setRepos] = useState([])
