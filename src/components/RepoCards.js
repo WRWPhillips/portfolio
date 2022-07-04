@@ -11,8 +11,6 @@ const RepoCards = () => {
       axios.get('https://portfolio-service-flask.herokuapp.com/projects'
         ).then( resp => {
           setRepos(resp.data.projects);
-        }).catch( err => {
-          console.log(err);
         });
     }
   

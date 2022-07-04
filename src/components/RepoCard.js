@@ -12,7 +12,6 @@ import {
 } from './StyledComponents';
 
 const RepoCard = props => {
-    console.log(process.env.PUBLIC_URL);
     return(
         <Card>
             <CardTitle>{props.repo.name}</CardTitle>

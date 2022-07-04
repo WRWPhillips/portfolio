@@ -15,8 +15,10 @@ import useDarkMode from "./hooks/useDarkMode";
 function App() {
   const [darkMode, setDarkMode] = useDarkMode(); 
   
+  // useMediaQuery hook provided by MUI
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
 
+  // MUI hook takes a second to load so this solves that problem
   useEffect(() => {
     setDarkMode(prefersDarkMode);
   }, [prefersDarkMode]);

@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaHome, FaLightbulb } from 'react-icons/fa';
 import { IoDocumentTextSharp } from 'react-icons/io5'
-import styled from 'styled-components';
 import { useLocation } from "react-router-dom";
 
 import {
@@ -17,7 +16,6 @@ import {
 const NavBar = (props) => {
 
     const location = useLocation();
-    console.log(location);
 
     const toggleMode = e => {
         e.preventDefault();
