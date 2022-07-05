@@ -21,6 +21,7 @@ function App() {
   // MUI hook takes a second to load so this solves that problem
   useEffect(() => {
     setDarkMode(prefersDarkMode);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prefersDarkMode]);
 
   return (
