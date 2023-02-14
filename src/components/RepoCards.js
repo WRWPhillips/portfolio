@@ -8,7 +8,7 @@ import { CardSection } from './StyledComponents'
 const RepoCards = () => {
     const [repos, setRepos] = useState([])
     const getProjects = () => {
-      axios.get('https://portfolio-service-flask.herokuapp.com/projects'
+      axios.get('https://portfolio-service.fly.dev/projects'
         ).then( resp => {
           setRepos(resp.data.projects);
         });
