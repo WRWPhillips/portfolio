@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import RepoCard from './RepoCard';
+import BioCard from './BioCard';
 
 import { CardSection } from './StyledComponents'
 
@@ -19,6 +20,8 @@ const RepoCards = () => {
     }, []);
 
     return(
+      <>
+        <BioCard></BioCard>
         <CardSection>
             {
             repos.map((repo) => (
@@ -26,6 +29,7 @@ const RepoCards = () => {
             ))
             }
         </CardSection>
+      </>
     )
 };
 

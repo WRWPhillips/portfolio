@@ -224,6 +224,19 @@ const Div = styled.div`
   align-content: center;
 `
 
+//BioCard Components
+
+const BioCardDiv = styled.div`
+  width: 76%;
+  border: .5rem solid ${props => props.theme.borderColor};
+  align-content: center;
+  margin: 5% auto;
+  border-radius: 1rem;
+  padding: 2%;
+  font-size: 1.15em;
+  min-height: 30 px;
+`
+
 export {
     Button,
     A, 
@@ -244,4 +257,5 @@ export {
     CardSection,
     Iframe,
     Div,
+    BioCardDiv
 }
