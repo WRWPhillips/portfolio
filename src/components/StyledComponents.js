@@ -129,14 +129,14 @@ const Card = styled.div`
     margin: 5%;
     border: 0.5rem solid ${props => props.theme.borderColor};
     padding: 2%;
-    border-radius: 1rem;    
-`
+    border-radius: 1rem;
+`;
 const CardTitle = styled.h2`
     font-size: 2rem; 
-`
+`;
 const CardDescription = styled.p`
 
-`
+`;
 const GithubLink = styled.a`
     display:inline-block;
     padding:0.35em 1.2em;
@@ -149,12 +149,12 @@ const GithubLink = styled.a`
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300; 
-`
+`;
 const Tags = styled.div`
     display: flex;
     flex-flow: row wrap; 
     align-content: space-between;
-`
+`;
 const Tag = styled.div`
     display:inline-block;
     padding:0.35em 1.2em;
@@ -167,20 +167,20 @@ const Tag = styled.div`
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;  
-`
+`;
 const Language = styled.div`
     display: flex;
     flex-direction: row; 
-`
+`;
 const LanguageImg = styled.img`
     height: 50px;
     width: 50px;
-`
+`;
 const LanguageName = styled.p`
     font-family: "Roboto", sans-serif;
     margin-left: 5%
 
-`
+`;
 // RepoCards components
 
 const CardSection = styled.div`
@@ -217,12 +217,12 @@ const Iframe = styled.iframe`
       margin: 0 10%;
   }
 
-`
+`;
 
 const Div = styled.div`
   display: flex;
   align-content: center;
-`
+`;
 
 //BioCard Components
 
@@ -235,7 +235,7 @@ const BioCardDiv = styled.div`
   padding: 2%;
   font-size: 1.15em;
   min-height: 30 px;
-`
+`;
 
 export {
     Button,

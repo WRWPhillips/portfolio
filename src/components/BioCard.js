@@ -6,11 +6,15 @@ const BioCard = (props) => {
         <BioCardDiv>
             <h2>About me:</h2>
             <p>
-                I'm a full stack web developer based in Bentonville, Arkansas who switched away from the medical industry in 2022. 
+                I'm a full stack web developer based in Herndon, VA who transitioned away from the medical industry in 2022. 
                 I have been programming as a hobby (and using linux) since high school and I have a natural passion for technology.
-                After teaching myself some python and ruby/rails, I graduated from a bootcamp focused on React and Node in 2021. 
+                After teaching myself some python and ruby/rails, I graduated from a bootcamp focused on React and Node in 2022. 
                 That same year I started a job working on cloud native Reactive Java infrastructure for the largest retailer in America.
             </p>
+	    <p>
+	    	I recently moved to Herndon, VA to pursue an L3 Consultant Engineer opportunity that has been incredibly enriching. 
+	    	In this role I've engaged in rapid development of solutions for clients start to finish using Next.JS and Azure Functions.
+	    </p>
             <p>    
                 I have quickly gained a stellar reputation not only for my technical ability but also
                 for my organizational ability and communication skills. I am great at working in teams and creating means to clear 
